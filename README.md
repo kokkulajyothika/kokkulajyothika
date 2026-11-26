@@ -11,7 +11,7 @@
 ### [Research Paper Assistant (RAG)](https://github.com/kokkulajyothika/Research-Paper-RAG-Assistant) · Python · PyTorch · RAG · [▶ Live demo](https://kokkulajyothika-research-paper-rag-assistant-app-gzdu8i.streamlit.app/)
 Ask questions about 15 landmark AI papers and get answers where **every sentence cites a paper and page**, with the quote checked in code.
 - Two-stage retrieval in PyTorch: bi-encoder search (all-MiniLM-L6-v2), then a cross-encoder reranker
-- The reranker moved the correct paper to rank 1 for **17/17** answerable test questions (94% → 100% Recall@1); all 3 off-topic questions correctly refused
+- The reranker moved the correct paper to rank 1 for **17/17** answerable test questions (94% → 100% Recall@1, a small hand-made test set); all 3 off-topic questions correctly refused
 - Strict JSON citations from the LLM, quote verification that handles PDF quirks, retry with feedback, 16 unit tests, deployed on Streamlit
 
 <a href="https://github.com/kokkulajyothika/Research-Paper-RAG-Assistant"><img src="https://raw.githubusercontent.com/kokkulajyothika/Research-Paper-RAG-Assistant/main/docs/screenshots/answer.jpg" width="420" alt="Research Paper Assistant answer with a verified citation"></a>
@@ -20,7 +20,7 @@ Ask questions about 15 landmark AI papers and get answers where **every sentence
 An agent that finds UK job adverts every morning, scores them against a CV with **verified evidence quotes**, flags paid "training schemes" and senior roles, and writes tailored CVs and cover letters **without inventing skills**.
 - Scoring calculated in JavaScript; every LLM quote is checked against the CV (hallucination check)
 - Chat assistant with memory and 5 tools (find jobs, tailor CV, update status, agent health)
-- Run log, error alerts, dashboard, weekly summary and an **accuracy test against human labels**: 84% rating agreement and 5/5 strong matches found on 19 labelled adverts
+- Run log, error alerts, dashboard, weekly summary and an **accuracy test against human labels**: 84% rating agreement (63% before rule fixes) and 5/5 strong matches found on 19 labelled adverts; rules were tuned on the same set, so a fresh re-test is next
 
 <a href="https://github.com/kokkulajyothika/AI-Job-Hunt-Agent-n8n"><img src="https://raw.githubusercontent.com/kokkulajyothika/AI-Job-Hunt-Agent-n8n/main/docs/screenshots/dashboard.jpg" width="420" alt="Job Hunt dashboard"></a>
 
